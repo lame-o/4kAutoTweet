@@ -1,0 +1,23 @@
+services:
+  - type: worker
+    name: 4k-tweet-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    plan: free
+    envVars:
+      - key: X_API_KEY
+        sync: false
+      - key: X_API_SECRET_KEY
+        sync: false
+      - key: X_ACCESS_TOKEN
+        sync: false
+      - key: X_ACCESS_TOKEN_SECRET
+        sync: false
+      - key: Client_ID
+        sync: false
+      - key: Client_Secret
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+    autoDeploy: true

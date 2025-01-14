@@ -67,10 +67,31 @@ openai==0.28.0         # OpenAI API
    - Place your 4K images in the `images/` directory
    - Supported formats: `.jpg`, `.jpeg`, `.png`
 
-4. **Run**
+4. **Run Locally**
    ```bash
    python bot.py
    ```
+
+## 🌐 Deployment
+
+### Deploy to Render
+
+1. Fork this repository
+2. Create a new **Background Worker** on Render
+3. Connect your GitHub repository
+4. Use these settings:
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `python bot.py`
+5. Add your environment variables in the Render dashboard
+6. Deploy!
+
+Alternatively, use the included `render.yaml` for automatic configuration:
+1. Fork this repository
+2. Click the "Deploy to Render" button below
+3. Add your environment variables
+4. Deploy!
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
 ## 🎯 Caption Style
 
